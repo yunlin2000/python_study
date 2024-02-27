@@ -13,8 +13,8 @@ headers={
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
          }
 
-resp=requests.get(url)
-print(resp.headers.get("content-type"))
+resp=requests.get(url,headers=headers)
+# print(resp.headers.get("content-type"))
 # print(resp.text)
 with open("myhtml.txt","w",encoding="utf-8") as f:
     f.write(resp.text)
