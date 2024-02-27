@@ -14,7 +14,7 @@ headers={
          }
 
 resp=requests.get(url,headers=headers)
-# print(resp.headers.get("content-type"))
+print(resp.headers.get("content-type"))
 # print(resp.text)
 with open("myhtml.txt","w",encoding="utf-8") as f:
     f.write(resp.text)
