@@ -22,10 +22,7 @@ with open("myhtml.txt","w",encoding="utf-8") as f:
 html = etree.HTML(resp.text)
 
 #xpath:/html/body/div[2]/div/div/div[3]/div/div[4]/div/div[2]/div[1]/div[1]/div/div[3]/div[2]/a
-# div_list = tree.xpath("//*[@id='__layout']/div/div[3]/div/div[4]/div/div[2]/div[1]/div[1]/div/div[3]/div[2]/a//text()")
-# //*[@id="__layout"]/div/div[3]/div/div[4]/div/div[2]/div[1]/div[6]/div/div[3]/div[2]/a/text()
-# //*[@id='__layout']/div/div[3]/div/div[4]/div/div[2]/div[1]/div
-# //*[@id="__layout"]/div/div[3]/div/div[4]/div/div[2]/div[1]/div[1]/div/a/div[2]/div[1]/div
+
 div_list= html.xpath("//*[@id='__layout']/div/div[3]/div/div[4]/div/div[2]/div[1]/div")
 print(div_list)
 for div in div_list:
