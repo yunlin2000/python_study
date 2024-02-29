@@ -9,7 +9,7 @@ s = input("请输入要翻译的英文：")
 dat={
     "kw":s
 }
-
+#发送post请求，必须把数据放在字典里，通过data参数传递
 resp = requests.post(url,data = dat)
 
 # print(resp.json())
