@@ -103,10 +103,10 @@ s ="""
 <div class='sylar'><span id='4'>范思哲</span></div>
 <div class='tory'><span id='5'>胡说八道</span></div>
 """
-obj = re.compile(r"<div class='.*?'><span id='\d+'>.*?</span></div>",re.S)    #re.S:让“.”匹配换行符
+obj = re.compile(r"<div class='(?P<EnglishName>.*?)'><span id='(?P<Id>\d+)'>(?P<Name>.*?)</span></div>",re.S)    #re.S:让“.”匹配换行符
 result = obj.finditer(s)
 for it in result:
-    print(it.group())
+    print(it.group("Id"),it.group("Name"),it.group("EnglishName"))
 
 
 
