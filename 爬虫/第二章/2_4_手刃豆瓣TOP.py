@@ -32,7 +32,7 @@ obj = re.compile(r'<li>.*?<div class="item">.*?<span class="title">(?P<title>.*?
 result = obj.finditer(resp.text)
 print(result)
 # 保存数据到data.csv文件
-f = open("./data.csv",mode="w")
+f = open("./data.csv",mode="w",encoding="utf-8")
 csvwriter = csv.writer(f)
 for it in result:
     # print(it.group("title"),it.group("year").strip(),it.group("score"),it.group("num"))
